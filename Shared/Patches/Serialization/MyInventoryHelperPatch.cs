@@ -67,11 +67,13 @@ public static class MyInventoryHelperPatch
         count = 0;
         inventoryItems = null;
 
+        // BinaryFormatter writes the whole backing array of the list,
+        // the slots past _size are nulls
         var decodedList = NrbfDecoder.DecodeClassRecord(new MemoryStream(checkData));
         if (
             decodedList.TypeNameMatches(typeof(List<MyGameInventoryItem>))
             && decodedList.GetArrayRecord("_items") is ArrayRecord decodedArray
-            && decodedArray.GetArray(typeof(MyGameInventoryItem[]), false)
+            && decodedArray.GetArray(typeof(MyGameInventoryItem[]), allowNulls: true)
                 is SerializationRecord[] items
         )
         {
