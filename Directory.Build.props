@@ -18,9 +18,9 @@
         <PlatformTarget>x64</PlatformTarget>
 
         <!-- Plugin version -->
-        <Version>10.0.5</Version>
-        <AssemblyVersion>10.0.5.0</AssemblyVersion>
-        <FileVersion>10.0.5.0</FileVersion>
+        <Version>10.0.6</Version>
+        <AssemblyVersion>10.0.6.0</AssemblyVersion>
+        <FileVersion>10.0.6.0</FileVersion>
     </PropertyGroup>
 
     <!-- Local developer overrides for the variables above; ignored by Git (*.user).
