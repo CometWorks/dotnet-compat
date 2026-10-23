@@ -5,6 +5,7 @@ using HarmonyLib;
 using Mono.Cecil;
 using ServerPlugin.Patches.Windows;
 using Shared.Patches.ImageProcessing;
+using Shared.Patches.Miscellaneous;
 using Shared.Patches.NullSafety;
 using Shared.Patches.Serialization;
 
@@ -101,6 +102,7 @@ public static class Preloader
 
         DecodePixelDataPrepatch.Prepatch(asmDef);
         MyHeightMapLoadingSystemPrepatch.Prepatch(asmDef);
+        MyStaticObjectsClusterPrepatch.Prepatch(asmDef);
         XmlSerializationPrepatch.Prepatch(asmDef);
         WindowsServicePrepatch.Prepatch(asmDef);
         MyProgramPrepatch.Prepatch(asmDef);
