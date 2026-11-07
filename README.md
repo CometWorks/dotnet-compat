@@ -47,6 +47,6 @@ Please start a support thread on the [Pulsar Discord](https://discord.gg/z8ZczP2
 
 ## License
 
-AGPL-3.0, see [LICENSE](LICENSE). Code from before 2026-11-07 was MIT licensed, see [LICENSE-MIT](LICENSE-MIT).
+AGPL-3.0, see [LICENSE](LICENSE).
 
 Please contact us for alternate licensing.
