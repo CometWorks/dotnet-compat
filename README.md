@@ -44,3 +44,9 @@ in the repo root, wrapped in a top-level `<Project>` element, and fill in your p
 ## Bug reports
 
 Please start a support thread on the [Pulsar Discord](https://discord.gg/z8ZczP2YZY)
+
+## License
+
+AGPL-3.0, see [LICENSE](LICENSE). Code from before 2026-11-07 was MIT licensed, see [LICENSE-MIT](LICENSE-MIT).
+
+Please contact us for alternate licensing.
