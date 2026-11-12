@@ -238,7 +238,7 @@
         </PropertyGroup>
         <MakeDir Directories="$(PluginDirectory)" />
         <Copy SourceFiles="$(TargetPath)" DestinationFiles="$(PluginDirectory)/plugin.dll" />
-        <Copy SourceFiles="$(MSBuildProjectDirectory)/../LICENSE;$(MSBuildProjectDirectory)/../LICENSING.md"
+        <Copy SourceFiles="$(MSBuildProjectDirectory)/../LICENSE;$(MSBuildProjectDirectory)/../LICENSING.md;$(MSBuildProjectDirectory)/../EXCEPTION.md"
               DestinationFolder="$(PluginDirectory)" />
         <Copy SourceFiles="$(PkgSystem_Management)/runtimes/win/lib/netcoreapp2.0/System.Management.dll" DestinationFolder="$(PluginDirectory)" />
         <Copy SourceFiles="$(PkgSystem_Formats_Nrbf)/lib/net10.0/System.Formats.Nrbf.dll" DestinationFolder="$(PluginDirectory)" />
