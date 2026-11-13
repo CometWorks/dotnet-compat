@@ -66,4 +66,9 @@
         <Bin64 Condition="'$(Bin64)' == ''">$(HOME)/.steam/steam/steamapps/common/SpaceEngineers/Bin64</Bin64>
         <DS64 Condition="'$(DS64)' == ''">$(HOME)/.steam/steam/steamapps/common/SpaceEngineersDedicatedServer/DedicatedServer64</DS64>
     </PropertyGroup>
+    <ItemGroup>
+        <None Include="$(MSBuildThisFileDirectory)LICENSE;$(MSBuildThisFileDirectory)LICENSING.md;$(MSBuildThisFileDirectory)EXCEPTION.md"
+              Link="%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest"
+              CopyToPublishDirectory="PreserveNewest" Pack="true" PackagePath="" />
+    </ItemGroup>
 </Project>
