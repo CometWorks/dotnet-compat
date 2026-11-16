@@ -37,6 +37,18 @@ in the repo root, wrapped in a top-level `<Project>` element, and fill in your p
 
 `Bin64` and `DS64` are auto-detected from Steam if left empty.
 
+### Tests
+
+`tests/string-hash-collision` checks the `MyStringHash` collision fix against the game's
+`VRage.dll` without starting the game. On .NET 10 vanilla `MyStringHash.GetOrCompute` hangs
+forever when a new string's hash belongs to another string (SE-1606). `vanilla` expects that hang
+and `patched` expects the fix's `ArgumentException` instead:
+
+```
+dotnet run -c Release --project tests/string-hash-collision -- vanilla
+dotnet run -c Release --project tests/string-hash-collision -- patched
+```
+
 ## Credits
 
 - `SpaceGT` for his contribution in fixing a lot of issues with the .NET 10 port, especially mod support. 
