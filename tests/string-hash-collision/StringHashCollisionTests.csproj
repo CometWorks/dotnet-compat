@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>14</LangVersion>
+    <Nullable>disable</Nullable>
+    <RootNamespace>StringHashCollisionTests</RootNamespace>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <!-- Standalone harness: not part of DotNetCompat.sln. The Directory.Build.props next to
+             this file shadows the repository root's, keeping the plugin's game path detection
+             out of the test build. -->
+    <ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>
+    <!-- Folder containing the game's VRage.dll, override with -p:Bin64=... -->
+    <Bin64 Condition="'$(Bin64)' == ''"
+      >$(HOME)/.steam/steam/steamapps/common/SpaceEngineers/Bin64</Bin64>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Lib.Harmony" Version="2.4.2" />
+    <Reference Include="VRage" HintPath="$(Bin64)/VRage.dll" />
+    <Reference Include="VRage.Library" HintPath="$(Bin64)/VRage.Library.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The code under test, compiled verbatim from the plugin sources. -->
+    <Compile Include="../../Shared/Patches/Miscellaneous/MyStringHashPatch.cs" Link="MyStringHashPatch.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+</Project>
