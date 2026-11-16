@@ -34,7 +34,7 @@ public static class MyGuiScreenMainMenuBasePatch
             return il;
         }
 
-        il.VerifyCodeHash(patchedMethod, "ae099828");
+        il.VerifyCodeHash(patchedMethod, "0b48c03f");
 
         var concatIndex = il.FindIndex(ci =>
             ci.opcode == OpCodes.Call
