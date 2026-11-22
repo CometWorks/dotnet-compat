@@ -59,9 +59,9 @@ Please start a support thread on the [Pulsar Discord](https://discord.gg/z8ZczP2
 
 ## License
 
-[AGPL v3 only](LICENSE) (`AGPL-3.0-only`). Your own plugins can stay closed under
-the [plugin exception](EXCEPTION.md) when they use documented interfaces for
-third-party use. See the [licensing guide](LICENSING.md) for scope and source
-requirements.
+[AGPL v3 only](LICENSE) (`AGPL-3.0-only`).
+Your own plugins can stay closed when they use the interfaces we document for
+third-party use. See the [plugin exception](EXCEPTION.md) for details.
+See the [licensing guide](LICENSING.md) for scope and source requirements.
 
 [Alternative licensing](LICENSING.md#alternative-licensing) is available case by case.
